@@ -1,54 +1,209 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="ru">
 <head>
-    <meta charset="utf-8" />
-    <title>ае</title>
-    <link rel="icon" href="мужик.gif" type="image/gif">
-    <link rel="stylesheet" href="ксс.css">
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Викторина</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .question {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+            .question img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 10px auto;
+                border-radius: 5px;
+            }
+
+        .options {
+            margin-top: 15px;
+        }
+
+        .option {
+            margin: 8px 0;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px 0;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+            button:hover {
+                background-color: #45a049;
+            }
+
+        #result {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #e8f5e9;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .correct {
+            background-color: #e8f5e9;
+        }
+
+        .incorrect {
+            background-color: #ffebee;
+        }
+    </style>
 </head>
 <body>
-<div class="фон"></div>
-<div id="вит"><marquee behavior="alternate" direction="right" scrollamount="3"><a href="вит.html" title="АААААААААААААА" 
-target="_blank"><img class="вит" src="вит.jpg"></img></a></marquee><div>
+    <h1>Викторина</h1>
 
-<div id="leftmenu">
-<details><summary><abbr title="а что это?">Ой</abbr></summary><a href="https://iichan.lol/b/"><ol><li>всем привет</li></a><a href="http://bulochka.org/b/"><li>я новенький</li></ol><br /></a><details>
-	<summary>внимание прикол</summary>
-	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a class="link" href="https://youtu.be/3Y77rAkmoYY?si=tmNxudyd1yBApjjs">ᗜˬᗜ</a>
-</details></details>
-</div>
+    <div class="question" id="q1">
+        <h3>1. Что это за мем с Охапкиным?</h3>
+        <img src="Охапкин.jpg">
+        <div class="options">
+            <div class="option"><input type="radio" name="q1" value="a"> я приводчииик</div>
+            <div class="option"><input type="radio" name="q1" value="b"> "Э-пи-пи-а-пу-пу пи-пи-а-пу-пу"</div>
+            <div class="option"><input type="radio" name="q1" value="c"> завод, утром - завод</div>
+            <div class="option"><input type="radio" name="q1" value="d"> я не знаю</div>
+        </div>
+    </div>
 
-<a href="https://pixelsafari.neocities.org/" title="КУПИТЬ БИЛЕТЫ СЕЙЧАС"><div id="rightnews"><div class="close"><img src="close.png"></img></div><div class="рклм"><img src="ohap.jpg">Легендарный исполнитель 
-трека "ЭПИАПАПУ" теперь в КИРОВЕ!!!!!!!<u>ЧИТАТЬ ДАЛЕЕ</u></img></div></div></a>
+    <div class="question" id="q2">
+        <h3>2. Продолжи тест песни "Это не карточка, это беда"?</h3>
+        <img src="дедостерон.jpg" >
+        <div class="options">
+            <div class="option"><input type="radio" name="q2" value="a"> Чёрно-белая еда</div>
+            <div class="option"><input type="radio" name="q2" value="b"> В корпусне вижу когда</div>
+            <div class="option"><input type="radio" name="q2" value="c"> Её я не сдам  ни за что никогда</div>
+            <div class="option"><input type="radio" name="q2" value="d"> Я не знаю</div>
+        </div>
+    </div>
 
-<a href="https://totallyfreecursors.com/" title="ИСКУСИТЕЛЬ ОСЦИЛОГРАФОВ"><div id="rightnews2"><div class="close"><img src="close.png"></img></div><div class="рклм"><img src="они.png">Они были не разлей вода,
- пока студент не узнал о ТАЙНОМ УВЛЕЧЕНИИ преподавателя, им оказался <u>ЧИТАТЬ ДАЛЕЕ</u></img></div></div></a>
+    <div class="question" id="q3">
+        <h3>3. Кто нарисовал эту картину?</h3>
+        <img src="адам.jpg">
+        <div class="options">
+            <div class="option"><input type="radio" name="q3" value="a"> Петр I </div>
+            <div class="option"><input type="radio" name="q3" value="b"> Пикассо</div>
+            <div class="option"><input type="radio" name="q3" value="c"> Микеланджело</div>
+            <div class="option"><input type="radio" name="q3" value="d"> Микеланджело(черепашка-ниндзя)</div>
+        </div>
+    </div>
 
-<a href="https://goblin-heart.net/sadgrl/" title="ЧЕЛОВЕК ШЛАГБАУМ"><div id="rightnews3"><div class="close"><img src="close.png"></img></div><div class="рклм"><img src="шур.jpg">Ученые оказались
-в ШОКЕ когда узнали КТО обучает студентов в ВятГУ...<br /><u>ЧИТАТЬ ДАЛЕЕ</u></img></div></div></a>
+    <div class="question" id="q4">
+        <h3>4. Что пережил этот челолвек?</h3>
+        <img src="гав.jpg">
+        <div class="options">
+            <div class="option"><input type="radio" name="q4" value="a"> Афганистан</div>
+            <div class="option"><input type="radio" name="q4" value="b"> он пережил всех</div>
+            <div class="option"><input type="radio" name="q4" value="c"> 5 жизней(горшечник, сын купца, клавшник негр в 1920, женщина в помпеях,ночной бабочкой в Болгарии)</div>
+            
+                
 
-<a href="https://www.makewordart.com/" title="КУПИТЬ КОСТЮМ СОВЫ СЕЙЧАС"><div id="rightnews4"><div class="close"><img src="close.png"></img></div><div class="рклм"><img src="дкн.jpg">
-Днём он обычный декан в ВятГУ, но ночью на своей даче... <u>ЧИТАТЬ ДАЛЕЕ</u></img></div></div></a>
 
-<a href="https://angelsaremathematical.neocities.org/" title="МАКСИМ :("><div id="rightnews5"><div class="close"><img src="close.png"></img></div><div class="рклм"><img src="макс.jpg">
-Ох и зря он надел ЭТОТ КОСТЮМ СОВЫ, ведь потом его повезли на дачу, где ему... <u>ЧИТАТЬ ДАЛЕЕ</u></img></div></div></a>
 
-<a href="https://410chan.org/b/" title="ЙОГА!!!!!!!!"><div id="rightnews6"><div class="close"><img src="close.png"></img></div><div class="рклм"><img src="лол.jpg">
-Делай ЭТО ПРОСТОЕ СОВЕТСКОЕ упражнение каждое УТРО, и спина болеть не будет!!!!!!!!!<u>ЧИТАТЬ ДАЛЕЕ</u></img></div></div></a>
+            </div>
+        </div>
+    </div>
 
-<div class="зал"><img src="tr.gif"></img>ВЫБЕРИ СВОЕГО БОЙЦА<img src="tr.gif"></img></div>
+    <div class="question" id="q5">
+        <h3>5. Продолжи текст его песни: принцесса нури в чашке танцует...</h3>
+        <img src="чай.jpg"">
+        <div class="options">
+            <div class="option"><input type="radio" name="q5" value="a"> Стуендентик знает, с кем он тусует</div>
+            <div class="option"><input type="radio" name="q5" value="b"> Охапкин от кофе кайфует</div>
+            <div class="option"><input type="radio" name="q5" value="c"> Лалетин знает, с кем он тусует</div>
+            <div class="option"><input type="radio" name="q5" value="d"> он заварил пуэр и тусует</div>
+        </div>
+    </div>
 
-<div class="wrapper">
-        <div class="box"><img class="gena" src="гена.png"></img>&#128329;ГЕННАДИЙ&#128329;</div>
-        <div class="box"><img class="gena" src="лего.png">&#128297;АЛЕКСАНДР&#128297;</img></div>
-        <div class="box"><img class="gena" src="саня.png">&#128150;САНЕЧКА&#128150;</img></div>
-        <div class="box"><img class="gena" src="вит.jpg">&#127928;ВИТАЛИЙ&#127928;</img></div>
-        <div class="box"><img class="gena" src="мужик.png">&#128260;МУЖИК 1&#128260;</img></div>
-        <div class="box"><img class="gena" src="тнц.gif">&#128378;МУЖИК 2&#128378;</img></div>
-        <div class="box"><img class="gena" src="тмт.png">&#127908;ТИМАТИ&#127908;</img></div>
-        <div class="box"><img class="gena" src="метр.png">&#127770;МЕТРОЛОГ&#127770;</img></div>
-</div>
+    <div class="question" id="q6">
+        <h3>6. Какому артисту принадлежит данный трек-лист музыкального альбома?</h3>
+        <img src="треки.jpg">
+        <div class="options">
+            <div class="option"><input type="radio" name="q6" value="a"> Сластимати</div>
+            <div class="option"><input type="radio" name="q6" value="b"> Гаврилов Гена(ГавриLOVE)</div>
+            <div class="option"><input type="radio" name="q6" value="c"> Диджей Лали</div>
+            <div class="option"><input type="radio" name="q6" value="d"> ШуракOFF</div>
+        </div>
+    </div>
+
+    <div class="question" id="q7">
+        <h3>7. Как называется это здание?</h3>
+        <img src="77.jpg">
+        <div class="options">
+            <div class="option"><input type="radio" name="q7" value="a"> Чайхана</div>
+            <div class="option"><input type="radio" name="q7" value="b"> Чайнотаун</div>
+            <div class="option"><input type="radio" name="q7" value="c"> Тайная самовария </div>
+            <div class="option"><input type="radio" name="q7" value="d"> 7 корпус ВятГу</div>
+        </div>
+    </div>
+
+    <button onclick="checkAnswers()">Проверить результаты</button>
+
+    <div id="result"></div>
+
+    <script>
+        const correctAnswers = {
+            q1: "b",
+            q2: "c",
+            q3: "c",
+            q4: "c",
+            q5: "c",
+            q6: "b",
+            q7: "c"
+        };
+
+        function checkAnswers() {
+            let score = 0;
+            const totalQuestions = Object.keys(correctAnswers).length;
+
+            for (let i = 1; i <= totalQuestions; i++) {
+                const questionName = "q" + i;
+                const selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
+                const questionDiv = document.getElementById(questionName);
+
+                if (selectedOption) {
+                    if (selectedOption.value === correctAnswers[questionName]) {
+                        score++;
+                        questionDiv.classList.add("correct");
+                        questionDiv.classList.remove("incorrect");
+                    } else {
+                        questionDiv.classList.add("incorrect");
+                        questionDiv.classList.remove("correct");
+                    }
+                } else {
+                    questionDiv.classList.remove("correct", "incorrect");
+                }
+            }
+
+            const resultDiv = document.getElementById("result");
+            resultDiv.style.display = "block";
+            resultDiv.textContent = `Вы ответили правильно на ${score} из ${totalQuestions} вопросов.`;
+
+            // Прокрутка к результатам
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
