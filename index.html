@@ -3,207 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Викторина</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-
-        .question {
-            background-color: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-            .question img {
-                max-width: 100%;
-                height: auto;
-                display: block;
-                margin: 10px auto;
-                border-radius: 5px;
-            }
-
-        .options {
-            margin-top: 15px;
-        }
-
-        .option {
-            margin: 8px 0;
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 20px 0;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-            button:hover {
-                background-color: #45a049;
-            }
-
-        #result {
-            font-size: 18px;
-            font-weight: bold;
-            margin: 20px 0;
-            padding: 15px;
-            background-color: #e8f5e9;
-            border-radius: 5px;
-            display: none;
-        }
-
-        .correct {
-            background-color: #e8f5e9;
-        }
-
-        .incorrect {
-            background-color: #ffebee;
-        }
-    </style>
+    <title>Brazen</title>
+    <link rel="stylesheet" href="Чисто стиль.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <h1>Викторина</h1>
-
-    <div class="question" id="q1">
-        <h3>1. Что это за мем с Охапкиным?</h3>
-        <img src="Охапкин.jpg">
-        <div class="options">
-            <div class="option"><input type="radio" name="q1" value="a"> я приводчииик</div>
-            <div class="option"><input type="radio" name="q1" value="b"> "Э-пи-пи-а-пу-пу пи-пи-а-пу-пу"</div>
-            <div class="option"><input type="radio" name="q1" value="c"> завод, утром - завод</div>
-            <div class="option"><input type="radio" name="q1" value="d"> я не знаю</div>
+    <header>
+        <div class="логотип">
+            <img src="бразен.jpg" alt="Бразен боксинг">
         </div>
+        <nav>
+            <ul>
+                <li><a href="#о-вузе">О зале</a></li>
+                <li><a href="#факультеты">Направления тренировок</a></li>
+                <li><a href="#новости">Информация</a></li>
+                <li><a href="#контакты">Контакты</a></li>
+                <li><a href="Тест.html">Пройти тест</a></li>
+            </ul>
+        </nav>
+        <div class="бургер-меню">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="реклама">
+        <a href="https://t.me/fartsa" target="_blank" class="реклама-ссылка">
+            <div class="реклама-контент">
+                <h3>Спортинвентарь тут!!!!!!!</h3>
+                <p></p>
+                <img src="цифровые кафедры.jpg" alt="Реклама">
+            </div>
+            <div class="крестик"><i class="fas fa-times"></i></div>
+        </a>
     </div>
 
-    <div class="question" id="q2">
-        <h3>2. Продолжи тест песни "Это не карточка, это беда"?</h3>
-        <img src="дедостерон.jpg" >
-        <div class="options">
-            <div class="option"><input type="radio" name="q2" value="a"> Чёрно-белая еда</div>
-            <div class="option"><input type="radio" name="q2" value="b"> В корпусне вижу когда</div>
-            <div class="option"><input type="radio" name="q2" value="c"> Её я не сдам  ни за что никогда</div>
-            <div class="option"><input type="radio" name="q2" value="d"> Я не знаю</div>
-        </div>
-    </div>
+    <main>
+        <section id="о-вузе" class="герой">
+            <div class="герой-контент">
+                <h1>Спортивный клуб BRAZEN</h1>
+               
+                <a href="https://yandex.ru/maps/org/brazen/108747425902/?ll=49.621293%2C58.603286&z=7" class="кнопка">Узнать больше</a>
+            </div>
+            <div class="герой-видео">
+                <video autoplay muted loop>
+                    <source src="видео.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
 
-    <div class="question" id="q3">
-        <h3>3. Кто нарисовал эту картину?</h3>
-        <img src="адам.jpg">
-        <div class="options">
-            <div class="option"><input type="radio" name="q3" value="a"> Петр I </div>
-            <div class="option"><input type="radio" name="q3" value="b"> Пикассо</div>
-            <div class="option"><input type="radio" name="q3" value="c"> Микеланджело</div>
-            <div class="option"><input type="radio" name="q3" value="d"> Микеланджело(черепашка-ниндзя)</div>
-        </div>
-    </div>
+        <section id="преимущества" class="преимущества">
+            <h2>Плюсы тренировок в нашем клубе</h2>
+            <div class="преимущества-грид">
+                <div class="преимущество">
+                    <i class="fas fa-user-check"></i>
+                    <h3>Профессиональный тренерский штаб</h3>
+                    
+                </div>
+                <div class="преимущество">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Дружественная атмосфера</h3>
+                    
+                </div>
+                <div class="преимущество">
+                    <i class="fas fa-creative-commons-by"></i>
+                    <h3>Индивидуальный подход</h3>
+                    
+                </div>
+                <div class="преимущество">
+                    <i class="fas fa-dumbbell"></i>
+                    <h3>Подготовка к соревнованиям</h3>
+                   
+                </div>
+            </div>
+        </section>
 
-    <div class="question" id="q4">
-        <h3>4. Что пережил этот челолвек?</h3>
-        <img src="гав.jpg">
-        <div class="options">
-            <div class="option"><input type="radio" name="q4" value="a"> Афганистан</div>
-            <div class="option"><input type="radio" name="q4" value="b"> он пережил всех</div>
-            <div class="option"><input type="radio" name="q4" value="c"> 5 жизней(горшечник, сын купца, клавшник негр в 1920, женщина в помпеях,ночной бабочкой в Болгарии)</div>
-            
-                
+        <section id="факультеты" class="факультеты">
+            <h2>Направления тренировок</h2>
+            <div class="факультеты-грид">
+                <div class="факультет">
+                    <img src="электротехнический.jpg" alt="Факультет 1">
+                    <h3>Бокс для взрослых и детей</h3>
+                    <a href="https://www.olympics.com/ru/news/boks-vid-sporta-istoriya-vesovye-kategorii-zvezdy" target="_blank" class="кнопка">Подробнее</a>
+                </div>
+                <div class="факультет">
+                    <img src="экономика.jpg" alt="Факультет 2">
+                    <h3>Пауэрлифтинг/ Силовые тренировки</h3>
+                    <a href="https://sportmail.ru/card/pauerlifting-1114/" target="_blank" class="кнопка">Подробнее</a>
+                </div>
+                <div class="факультет">
+                    <img src="лингвист.jpg" alt="Факультет 3">
+                    <h3>Бодибилдинг</h3>
+                    <a href="https://apkipp.ru/articles/bodibilding-kak-vid-sporta/" target="_blank" class="кнопка">Подробнее</a>
+                </div>
+                <div class="факультет">
+                    <img src="строительство.jpg" alt="Факультет 4">
+                    <h3>Растяжка (стретчинг)</h3>
+                    <a href="https://rsport.ria.ru/20230109/stretching-1843535858.html" target="_blank" class="кнопка">Подробнее</a>
+                </div>
+            </div>
+        </section>
 
+        <section id="новости" class="новости">
+            <h2>Информация</h2>
+            <div class="новости-грид">
+                <article class="новость">
+                    <img src="новость1.jpg" alt="Новость 1">
+                    <h3>Прайс лист</h3>
+                    <p>Здесь размещены цены на занятия</p>
+                    <a href="https://vk.com/photo-210416636_457239376" class="кнопка">Посмотреть цены</a>
+                </article>
+                <article class="новость">
+                    <img src="новость2.jpg" alt="Новость 2">
+                    <h3>
+                        Расписание групп
+                    </h3>
+                    <p>
+                        Здесь размещено расписание групповых зянятий
+                    </p>
+                    <a href="https://vk.com/photo-210416636_457239363" class="кнопка">Посмотреть расписание</a>
+                </article>
+                <article class="новость">
+                    <img src="новость3.jpg" alt="Новость 3">
+                    <h3>Режим работы(лето)</h3>
+                    <p>Здесь размещен режим работы</p>
+                    <a href="https://vk.com/photo661832654_457244504" class="кнопка">Посмотреть режим работы</a>
+                </article>
+            </div>
+        </section>
 
+        <section id="контакты" class="контакты">
+            <h2>Как нас найти</h2>
+            <div class="контакты-контейнер">
+               
+                <div class="контактная-информация">
+                    <h3>Контактная информация</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Киров, Московская 135
+ТЦ "Малахит"</p>
+                    <p>+7 (922) 665-99-92</p>
+                    <div class="соцсети">
+                        <a href="https://vk.com/brazensport"><i class="fab fa-vk"></i></a>
+                        <a href="https://t.me/brazen43"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
+    <footer>
+        <div class="футер-контент">
+            <div class="футер-секция">
             </div>
         </div>
-    </div>
-
-    <div class="question" id="q5">
-        <h3>5. Продолжи текст его песни: принцесса нури в чашке танцует...</h3>
-        <img src="чай.jpg"">
-        <div class="options">
-            <div class="option"><input type="radio" name="q5" value="a"> Стуендентик знает, с кем он тусует</div>
-            <div class="option"><input type="radio" name="q5" value="b"> Охапкин от кофе кайфует</div>
-            <div class="option"><input type="radio" name="q5" value="c"> Лалетин знает, с кем он тусует</div>
-            <div class="option"><input type="radio" name="q5" value="d"> он заварил пуэр и тусует</div>
+        <div class="копирайт">
+            <p>&copy; 2025 Спортивный клубе Brazen.</p>
+            <a href="Тест.html" class="кнопка">Пройти тест о боксе</a>
         </div>
-    </div>
-
-    <div class="question" id="q6">
-        <h3>6. Какому артисту принадлежит данный трек-лист музыкального альбома?</h3>
-        <img src="треки.jpg">
-        <div class="options">
-            <div class="option"><input type="radio" name="q6" value="a"> Сластимати</div>
-            <div class="option"><input type="radio" name="q6" value="b"> Гаврилов Гена(ГавриLOVE)</div>
-            <div class="option"><input type="radio" name="q6" value="c"> Диджей Лали</div>
-            <div class="option"><input type="radio" name="q6" value="d"> ШуракOFF</div>
-        </div>
-    </div>
-
-    <div class="question" id="q7">
-        <h3>7. Как называется это здание?</h3>
-        <img src="77.jpg">
-        <div class="options">
-            <div class="option"><input type="radio" name="q7" value="a"> Чайхана</div>
-            <div class="option"><input type="radio" name="q7" value="b"> Чайнотаун</div>
-            <div class="option"><input type="radio" name="q7" value="c"> Тайная самовария </div>
-            <div class="option"><input type="radio" name="q7" value="d"> 7 корпус ВятГу</div>
-        </div>
-    </div>
-
-    <button onclick="checkAnswers()">Проверить результаты</button>
-
-    <div id="result"></div>
+    </footer>
 
     <script>
-        const correctAnswers = {
-            q1: "b",
-            q2: "c",
-            q3: "c",
-            q4: "c",
-            q5: "c",
-            q6: "b",
-            q7: "c"
-        };
+        // Бургер-меню для мобильных устройств
+        document.querySelector('.бургер-меню').addEventListener('click', function () {
+            document.querySelector('nav ul').classList.toggle('активное');
+        });
 
-        function checkAnswers() {
-            let score = 0;
-            const totalQuestions = Object.keys(correctAnswers).length;
-
-            for (let i = 1; i <= totalQuestions; i++) {
-                const questionName = "q" + i;
-                const selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
-                const questionDiv = document.getElementById(questionName);
-
-                if (selectedOption) {
-                    if (selectedOption.value === correctAnswers[questionName]) {
-                        score++;
-                        questionDiv.classList.add("correct");
-                        questionDiv.classList.remove("incorrect");
-                    } else {
-                        questionDiv.classList.add("incorrect");
-                        questionDiv.classList.remove("correct");
-                    }
-                } else {
-                    questionDiv.classList.remove("correct", "incorrect");
-                }
-            }
-
-            const resultDiv = document.getElementById("result");
-            resultDiv.style.display = "block";
-            resultDiv.textContent = `Вы ответили правильно на ${score} из ${totalQuestions} вопросов.`;
-
-            // Прокрутка к результатам
-            resultDiv.scrollIntoView({ behavior: 'smooth' });
-        }
+        // Плавная прокрутка для якорных ссылок
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 </body>
 </html>
